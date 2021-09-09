@@ -2,7 +2,6 @@ package servlet;
 
 import Tools.Keyword;
 import Tools.Read;
-import Tools.Segmenter;
 import Tools.TFIDF;
 
 import javax.servlet.ServletException;
@@ -30,9 +29,6 @@ public class SegServlet extends HttpServlet {
         HashMap<String,Double> hashMap = new HashMap<>();
         for (Keyword word : list)
             hashMap.put(word.getName(),word.getTfidfvalue());
-
-        //Segmenter segmenter = new Segmenter();
-        //HashMap<String, Integer> hashMap = segmenter.getWordFreq(filePath);
 
         req.setAttribute("data", hashMap);
         req.getRequestDispatcher("/wordcloud.jsp").forward(req, resp);

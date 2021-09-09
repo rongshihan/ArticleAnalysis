@@ -16,35 +16,47 @@
     <script src="JS/echarts-wordcloud.min.js" type="text/javascript"></script>
 </head>
 <body>
-<div id="main" style="width: 98vw;height: 96vh"></div>
+<div id="main" style="margin: 0 auto"></div>
+
 </body>
 </html>
 <script type="text/javascript">
+    const main = document.getElementById('main');
+    main.style.width = 80 + "%";
+    main.style.height = main.offsetWidth + "px";
+
     const chart = echarts.init(document.getElementById('main'));
+
+    const maskImage = new Image();
+    maskImage.src = './images/cloud4.png';
 
     chart.setOption({
         series: [{
             type: 'wordCloud',
 
-            // The shape of the "cloud" to draw. Can be any polar equation represented as a
-            // callback function, or a keyword present. Available presents are circle (default),
-            // cardioid (apple or heart shape curve, the most known polar equation), diamond (
-            // alias of square), triangle-forward, triangle, (alias of triangle-upright, pentagon, and star.
+            // 要绘制的“云”的形状。可以是表示为回调函数或关键字present的任何极性方程。
+            // circle（圆形，默认）、
+            // cardioid（苹果形或心形曲线，最著名的极坐标方程）、
+            // diamond（正方形的别名）、
+            // triangle-forward、
+            // triangle（三角形直立的别名）、
+            // pentagon（五边形）
+            // star（星形）
 
-            shape: 'diamond',
+            // shape: 'diamond',
 
             // A silhouette image which the white area will be excluded from drawing texts.
             // The shape option will continue to apply as the shape of the cloud to grow.
 
-            // maskImage: maskImage,
+            maskImage: maskImage,
 
             // Folllowing left/top/width/height/right/bottom are used for positioning the word cloud
             // Default to be put in the center and has 75% x 80% size.
 
             left: 'center',
             top: 'center',
-            width: '70%',
-            height: '80%',
+            width: '100%',
+            height: '100%',
             right: null,
             bottom: null,
 

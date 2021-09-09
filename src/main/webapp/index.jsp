@@ -19,9 +19,6 @@
 </head>
 <body>
 <div class="container my-4">
-    <center>
-        <h1>Social Network Analysis Centrality Calculation</h1>
-    </center>
     <hr>
     <form enctype="multipart/form-data" action="uploadServlet" method="post">
         <div class="upload-wrap">

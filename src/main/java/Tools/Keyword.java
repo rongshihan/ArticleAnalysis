@@ -46,7 +46,7 @@ public class Keyword implements Comparable<Keyword>{
     }
 
     /**
-     * 为了在返回tdidf分析结果时，可以按照值的从大到小顺序返回，故实现Comparable接口
+     * 为了在返回TF-IDF分析结果时，可以按照值的从大到小顺序返回，故实现Comparable接口
      */
     @Override
     public int compareTo(Keyword o)

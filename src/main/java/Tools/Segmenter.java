@@ -10,6 +10,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * 本类原本是基于ansj分词器实现关键词提取，但ansj已经实现了关键词提取，故此本类作废
+ *
+ */
 public class Segmenter {
     /**
      * 读取dic文件
